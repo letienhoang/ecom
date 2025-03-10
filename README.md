@@ -67,8 +67,8 @@ Since this project does not include build tools like `gulpfile.js`, `webpack.con
 2. **Compile the SCSS file:**  
    Open your terminal in the project root and run:
    ```bash
-   npm install --save--dev sass
-   npx sass assets/scss/style.scss assets/css/style.css
+   npm install -g sass
+   sass --watch assets/scss/style.scss assets/css/style.css
    ```
    This command compiles `assets/scss/style.scss` (and its imported partials) into `assets/css/style.css`.
 
