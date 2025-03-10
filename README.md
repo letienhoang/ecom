@@ -98,11 +98,11 @@ The template includes Modernizr (`modernizr-3.6.0.min.js`) to detect browser fea
 - **Theme Name:** Ecom
 - **Version:** 3.0
 - **License:** GNU General Public License v2 or later (see [GPL-2.0](http://www.gnu.org/licenses/gpl-2.0.html) for details)
-- **Developer:** [Your Company or Developer Name]
+- **Developer:** letienhoang
 
 ## Contact & Support
 If you have any questions or need support regarding this template, please contact:
-- **Email:** [ltienhoang2@gmail.com]
+- **Email:** ltienhoang2@gmail.com
 ---
 
 Happy coding and enjoy customizing your Ecom template!
