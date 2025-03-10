@@ -1,3 +1,5 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 @include media-breakpoint-up(xxl) {}
 
 @media (max-width: 1550px) {
@@ -17,6 +19,12 @@
         height: 25px;
     }
 
+    .header .main-header .header-right .header-shop .icon-list {
+        padding: 0px 18px 0px 18px;
+        width: 25px;
+        height: 25px;
+    }
+
     .header-shop {
         a {
             span {
@@ -26,6 +34,10 @@
     }
 
     .header .main-header .header-left .header-shop {
+        width: 16%;
+    }
+
+    .header .main-header .header-right .header-shop {
         width: 16%;
     }
 }
@@ -134,6 +146,12 @@
     }
 
     .header .main-header .header-left .header-shop {
+        width: 35%;
+        padding-right: 35px;
+        min-width: 189px;
+    }
+
+    .header .main-header .header-right .header-shop {
         width: 35%;
         padding-right: 35px;
         min-width: 189px;
@@ -280,6 +298,10 @@
     }
 
     .header .main-header .header-left .header-shop {
+        padding-top: 5px;
+    }
+
+    .header .main-header .header-right .header-shop {
         padding-top: 5px;
     }
 
@@ -872,6 +894,10 @@
         min-width: 189px;
     }
 
+    .header .main-header .header-right .header-shop {
+        min-width: 189px;
+    }
+
     .header .main-header .header-left .header-search {
         display: none;
     }
@@ -885,6 +911,10 @@
     }
 
     .header .main-header .header-left .header-shop {
+        width: 55%;
+    }
+
+    .header .main-header .header-right .header-shop {
         width: 55%;
     }
 

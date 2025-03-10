@@ -90,6 +90,12 @@ In the file `assets/scss/vendors/_vendors-import.scss`, you will find imports fo
 - These files load the CSS from various plugins and libraries.
 - **Note:** Do not edit these vendor files directly. If you need to override any styles, add your custom CSS rules in your own SCSS files (e.g., within components or a dedicated overrides file) after these imports.
 
+## Build css file
+```bash
+npm install --save--dev sass
+npx sass assets/scss/style.scss assets/css/style.css
+```
+
 ## Browser Support
 The template includes Modernizr (`modernizr-3.6.0.min.js`) to detect browser features and provide fallbacks where needed, ensuring a smooth experience across various browsers.
 

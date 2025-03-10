@@ -1,3 +1,4 @@
+@use '../abstracts/variables' as *;
 .header {
     padding: 0px 0;
     float: left;
@@ -133,10 +134,68 @@
             }
         }
         .header-right {
+            display: flex;
             max-width: 225px;
             width: 100%;
+            padding: 5px 0px;
+            align-items: right;
             .block-signin {
                 text-align: right;
+            }
+            .header-shop {
+                width: 35%;
+                text-align: right;
+                .icon-list {
+                    display: inline-block;
+                    padding: 0px 15px 0px 30px;
+                    background-repeat: no-repeat;
+                    background-position: 0px -1px;
+                    position: relative;
+                    font-size: 16px;
+                    color: $color-brand-3;
+                    line-height: 24px;
+                    cursor: pointer;
+                    &:hover {
+                        color: $color-brand-1;
+                    }
+                    &:last-child {
+                        padding-right: 0px;
+                    }
+                    img {
+                        float: left;
+                        margin: 3px 6px 0px 0px;
+                    }
+                }
+                .icon-account {
+                    background-image: url(../imgs/template/account.svg);
+                }
+                .icon-wishlist {
+                    background-image: url(../imgs/template/wishlist.svg);
+                    background-position: 0px 2px;
+                    padding-left: 35px;
+                }
+                .icon-cart {
+                    background-image: url(../imgs/template/cart.svg);
+                    background-position: 0px 2px;
+                    padding-left: 35px;
+                }
+                .icon-compare {
+                    background-image: url(../imgs/template/compare.svg);
+                    background-position: 0px 2px;
+                }
+                .number-item {
+                    background-color: $color-brand-2;
+                    border-radius: 50%;
+                    position: absolute;
+                    top: -8px;
+                    left: 14px;
+                    width: 20px;
+                    height: 20px;
+                    color: $color-white;
+                    text-align: center;
+                    line-height: 20px;
+                    display: inline-block;
+                }
             }
         }
     }
@@ -494,6 +553,10 @@
         width: 35%;
     }
     .main-header .header-left .header-shop {
+        width: 45%;
+    }
+
+    .main-header .header-right .header-shop {
         width: 45%;
     }
 }

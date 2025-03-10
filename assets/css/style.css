@@ -1,7 +1,7 @@
 /***
  Theme Name: Ecom
- Description: Job Board Finder HTML template
- Version: 1.0
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
  License: GNU General Public License v2 or later
  License URI: http://www.gnu.org/licenses/gpl-2.0.html
 ==============================
@@ -26,7 +26,35 @@ TABLE CONTENT
  WP STYPE
  Custom amine
 ***/
-@import url(https://fonts.bunny.net/css?family=dm-sans:400,500,700|kanit:700);
+@import url("https://fonts.bunny.net/css?family=dm-sans:400,500,700|kanit:700");
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 /*import vendors*/
 @import url(../css/vendors/normalize.css);
 @import url(../css/vendors/bootstrap.min.css);
@@ -35,6 +63,34 @@ TABLE CONTENT
 @import url(../css/plugins/select2.min.css);
 @import url(../css/plugins/slick.css);
 @import url(../css/plugins/animate.min.css);
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 /*RESET*/
 html,
 body,
@@ -208,7 +264,8 @@ input[type=number]:focus,
 
 input:focus::-moz-placeholder {
   opacity: 0;
-  -moz-transition: 0.4s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
   transition: 0.4s;
 }
 
@@ -221,10 +278,6 @@ li.hr span {
 }
 
 /*--- Common Classes---------------------*/
-::-moz-selection {
-  background: #425A8B; /* WebKit/Blink Browsers */
-  color: #fff;
-}
 ::selection {
   background: #425A8B; /* WebKit/Blink Browsers */
   color: #fff;
@@ -233,11 +286,6 @@ li.hr span {
 ::-moz-selection {
   background: #425A8B; /* Gecko Browsers */
   color: #fff;
-}
-
-::-moz-placeholder {
-  color: #B2C2E1;
-  opacity: 1;
 }
 
 ::placeholder {
@@ -1035,6 +1083,8 @@ img,
 input,
 span,
 h4 {
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
@@ -1058,18 +1108,90 @@ h4 {
   width: 35px;
   height: 35px;
   display: inline-block;
+  -webkit-animation: spinner 1.2s infinite ease-in-out;
+  -o-animation: spinner 1.2s infinite ease-in-out;
   animation: spinner 1.2s infinite ease-in-out;
   background: url(../imgs/theme/favicon.svg);
   box-shadow: 0 0 10px #fff;
 }
-@keyframes spinner {
+
+@-webkit-keyframes spinner {
   0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(0) rotateY(0);
+    -o-transform: perspective(120px) rotateX(0) rotateY(0);
     transform: perspective(120px) rotateX(0) rotateY(0);
   }
   50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(0);
     transform: perspective(120px) rotateX(-180deg) rotateY(0);
   }
   100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(0) rotateY(0);
+    -o-transform: perspective(120px) rotateX(0) rotateY(0);
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(0) rotateY(0);
+    -o-transform: perspective(120px) rotateX(0) rotateY(0);
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(0) rotateY(0);
+    -o-transform: perspective(120px) rotateX(0) rotateY(0);
+    transform: perspective(120px) rotateX(0) rotateY(0);
+  }
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(0);
+    transform: perspective(120px) rotateX(-180deg) rotateY(0);
+  }
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -ms-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    -o-transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
     transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }
 }
@@ -1102,6 +1224,34 @@ h4 {
   animation: jump 0.5s linear alternate infinite;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 /*TYPOGRAPHY*/
 body {
   color: #425A8B;
@@ -1141,6 +1291,34 @@ a.text-brand-3:hover {
   color: #0BA9ED;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .btn {
   border-radius: 4px;
   padding: 10px 22px;
@@ -1259,6 +1437,8 @@ a.text-brand-3:hover {
   width: 100%;
   text-align: center;
   padding: 7px 22px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 .btn.btn-cart:hover {
@@ -1289,7 +1469,9 @@ a.text-brand-3:hover {
   background: #ffffff url(../imgs/template/icons/trend.svg) no-repeat center;
   padding: 0px;
   opacity: 0;
+  -webkit-transform: translateX(10px);
   transform: translateX(10px);
+  -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   will-change: opacity, transform;
 }
@@ -1303,10 +1485,13 @@ a.text-brand-3:hover {
   background: #ffffff url(../imgs/template/icons/wishlist.svg) no-repeat center;
   padding: 0px;
   opacity: 0;
+  -webkit-transform: translateX(10px);
   transform: translateX(10px);
+  -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   will-change: opacity, transform;
   transition-duration: 0.2s;
+  -webkit-transition-delay: 0.1s;
   transition-delay: 0.1s;
 }
 .btn.btn-wishlist:hover {
@@ -1319,9 +1504,12 @@ a.text-brand-3:hover {
   background: #ffffff url(../imgs/template/icons/compare.svg) no-repeat center;
   padding: 0px;
   opacity: 0;
+  -webkit-transform: translateX(10px);
   transform: translateX(10px);
+  -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   will-change: opacity, transform;
+  -webkit-transition-delay: 0.14s;
   transition-delay: 0.14s;
 }
 .btn.btn-compare:hover {
@@ -1334,9 +1522,12 @@ a.text-brand-3:hover {
   background: #ffffff url(../imgs/template/icons/view.svg) no-repeat center;
   padding: 0px;
   opacity: 0;
+  -webkit-transform: translateX(10px);
   transform: translateX(10px);
+  -webkit-transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   transition: all 0.2s cubic-bezier(0.28, 0.12, 0.22, 1);
   will-change: opacity, transform;
+  -webkit-transition-delay: 0.18s;
   transition-delay: 0.18s;
 }
 .btn.btn-quickview:hover {
@@ -1621,6 +1812,8 @@ a.text-brand-3:hover {
 .btn-tooltip:hover:before {
   opacity: 1;
   visibility: visible;
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
   transform: translateY(-8px);
   transition-duration: 0.2s;
 }
@@ -1633,6 +1826,34 @@ a.text-brand-3:hover {
   color: #425A8B;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .cb-container {
   display: block;
   position: relative;
@@ -1642,6 +1863,7 @@ a.text-brand-3:hover {
   line-height: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1707,6 +1929,7 @@ a.text-brand-3:hover {
   line-height: 22px;
   -webkit-user-select: none;
   -moz-user-select: none;
+  -ms-user-select: none;
   user-select: none;
 }
 
@@ -1784,6 +2007,34 @@ a.text-brand-3:hover {
   line-height: 18px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-swiper {
   position: relative;
   width: 100%;
@@ -1921,6 +2172,34 @@ a.text-brand-3:hover {
   left: 25px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 /* This line can be removed it was just for display on CodePen: */
 .slider-labels {
   margin-top: 10px;
@@ -1933,9 +2212,12 @@ a.text-brand-3:hover {
 .noUi-target, .noUi-target * {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
+  -ms-touch-action: none;
   touch-action: none;
+  -ms-user-select: none;
   -moz-user-select: none;
   user-select: none;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1972,6 +2254,7 @@ a.text-brand-3:hover {
 }
 
 .noUi-state-tap .noUi-origin {
+  -webkit-transition: left 0.3s, top 0.3s;
   transition: left 0.3s, top 0.3s;
 }
 
@@ -1983,6 +2266,7 @@ a.text-brand-3:hover {
  * Browsers can paint handles in their own layer.
  */
 .noUi-base, .noUi-handle {
+  -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 
@@ -2009,6 +2293,7 @@ a.text-brand-3:hover {
 
 .noUi-connect {
   background: #345DBB;
+  -webkit-transition: background 450ms;
   transition: background 450ms;
 }
 
@@ -2032,6 +2317,8 @@ a.text-brand-3:hover {
 
 .noUi-handle {
   cursor: default;
+  -webkit-box-sizing: content-box !important;
+  -moz-box-sizing: content-box !important;
   box-sizing: content-box !important;
 }
 
@@ -2099,6 +2386,34 @@ a.text-brand-3:hover {
   top: -6px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .list-col-5 {
   display: table;
   table-layout: fixed;
@@ -2650,6 +2965,7 @@ a.text-brand-3:hover {
 
 .card-grid-inner:hover .btn.btn-trend, .card-grid-inner:hover .btn.btn-wishlist, .card-grid-inner:hover .btn.btn-wishlist, .card-grid-inner:hover .btn.btn-compare, .card-grid-inner:hover .btn.btn-quickview {
   opacity: 1;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
   pointer-events: auto;
 }
@@ -2741,6 +3057,43 @@ a.text-brand-3:hover {
 .card-product-small .card-info .box-prices .price-line {
   text-decoration: line-through;
 }
+
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
+@-webkit-keyframes load7 {
+  0%, 80%, 100% {
+    box-shadow: 0 2.5em 0 -1.3em;
+  }
+  40% {
+    box-shadow: 0 2.5em 0 0;
+  }
+}
 @keyframes load7 {
   0%, 80%, 100% {
     box-shadow: 0 2.5em 0 -1.3em;
@@ -2753,33 +3106,43 @@ a.text-brand-3:hover {
   border-radius: 50%;
   width: 2em;
   height: 2em;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
   color: #425A8B;
   font-size: 10px;
   margin: 80px auto;
   position: relative;
   text-indent: -9999em;
+  -webkit-transform: translateZ(0);
+  -ms-transform: translateZ(0);
   transform: translateZ(0);
+  -webkit-animation-delay: -0.16s;
   animation-delay: -0.16s;
 }
 .loader:before {
   border-radius: 50%;
   width: 2em;
   height: 2em;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
   content: "";
   position: absolute;
   top: 0;
   left: -3.5em;
+  -webkit-animation-delay: -0.32s;
   animation-delay: -0.32s;
 }
 .loader:after {
   border-radius: 50%;
   width: 2em;
   height: 2em;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-animation: load7 1.8s infinite ease-in-out;
   animation: load7 1.8s infinite ease-in-out;
   content: "";
   position: absolute;
@@ -2845,6 +3208,8 @@ a.text-brand-3:hover {
   right: 0;
   bottom: 0;
   z-index: 9999999999;
+  -webkit-transition: 0.6s;
+  -o-transition: 0.6s;
   transition: 0.6s;
   margin: 0 auto;
 }
@@ -2945,6 +3310,34 @@ a.text-brand-3:hover {
   margin: -0.5rem 0rem -0.5rem auto;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .banner-hero {
   padding: 24px 0px 20px 0px;
   position: relative;
@@ -3065,33 +3458,57 @@ a.text-brand-3:hover {
 }
 @keyframes hero-thumb-sm-animation {
   0% {
+    -webkit-transform: translateY(-20px) translateX(50px);
+    -moz-transform: translateY(-20px) translateX(50px);
+    -ms-transform: translateY(-20px) translateX(50px);
     transform: translateY(-20px) translateX(50px);
   }
   100% {
+    -webkit-transform: translateY(-20px) translateX(0px);
+    -moz-transform: translateY(-20px) translateX(0px);
+    -ms-transform: translateY(-20px) translateX(0px);
     transform: translateY(-20px) translateX(0px);
   }
 }
 @keyframes hero-thumb-sm-2-animation {
   0% {
+    -webkit-transform: translateY(-50px);
+    -moz-transform: translateY(-50px);
+    -ms-transform: translateY(-50px);
     transform: translateY(-50px);
   }
   100% {
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+    -ms-transform: translateY(0px);
     transform: translateY(0px);
   }
 }
 .shape-1 {
+  -webkit-animation: hero-thumb-animation 2s linear infinite alternate;
+  -moz-animation: hero-thumb-animation 2s linear infinite alternate;
+  -o-animation: hero-thumb-animation 2s linear infinite alternate;
   animation: hero-thumb-animation 2s linear infinite alternate;
 }
 
 .shape-1-2 {
+  -webkit-animation: hero-thumb-animation-2 2s linear infinite alternate;
+  -moz-animation: hero-thumb-animation-2 2s linear infinite alternate;
+  -o-animation: hero-thumb-animation-2 2s linear infinite alternate;
   animation: hero-thumb-animation-2 2s linear infinite alternate;
 }
 
 .shape-2 {
+  -webkit-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+  -moz-animation: hero-thumb-sm-animation 4s linear infinite alternate;
+  -o-animation: hero-thumb-sm-animation 4s linear infinite alternate;
   animation: hero-thumb-sm-animation 4s linear infinite alternate;
 }
 
 .shape-3 {
+  -webkit-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+  -moz-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
+  -o-animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
   animation: hero-thumb-sm-2-animation 4s linear infinite alternate;
 }
 
@@ -3150,6 +3567,34 @@ a.text-brand-3:hover {
   background-color: #FD9636;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .header {
   padding: 0px 0;
   float: left;
@@ -3287,11 +3732,69 @@ a.text-brand-3:hover {
   display: inline-block;
 }
 .header .main-header .header-right {
+  display: flex;
   max-width: 225px;
   width: 100%;
+  padding: 5px 0px;
+  align-items: right;
 }
 .header .main-header .header-right .block-signin {
   text-align: right;
+}
+.header .main-header .header-right .header-shop {
+  width: 35%;
+  text-align: right;
+}
+.header .main-header .header-right .header-shop .icon-list {
+  display: inline-block;
+  padding: 0px 15px 0px 30px;
+  background-repeat: no-repeat;
+  background-position: 0px -1px;
+  position: relative;
+  font-size: 16px;
+  color: #425A8B;
+  line-height: 24px;
+  cursor: pointer;
+}
+.header .main-header .header-right .header-shop .icon-list:hover {
+  color: #0BA9ED;
+}
+.header .main-header .header-right .header-shop .icon-list:last-child {
+  padding-right: 0px;
+}
+.header .main-header .header-right .header-shop .icon-list img {
+  float: left;
+  margin: 3px 6px 0px 0px;
+}
+.header .main-header .header-right .header-shop .icon-account {
+  background-image: url(../imgs/template/account.svg);
+}
+.header .main-header .header-right .header-shop .icon-wishlist {
+  background-image: url(../imgs/template/wishlist.svg);
+  background-position: 0px 2px;
+  padding-left: 35px;
+}
+.header .main-header .header-right .header-shop .icon-cart {
+  background-image: url(../imgs/template/cart.svg);
+  background-position: 0px 2px;
+  padding-left: 35px;
+}
+.header .main-header .header-right .header-shop .icon-compare {
+  background-image: url(../imgs/template/compare.svg);
+  background-position: 0px 2px;
+}
+.header .main-header .header-right .header-shop .number-item {
+  background-color: #FD9636;
+  border-radius: 50%;
+  position: absolute;
+  top: -8px;
+  left: 14px;
+  width: 20px;
+  height: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 20px;
+  display: inline-block;
 }
 .header .nav-main-menu {
   width: auto;
@@ -3362,6 +3865,7 @@ a.text-brand-3:hover {
 .header .main-menu li ul {
   opacity: 0;
   visibility: hidden;
+  -webkit-transition-duration: 0.2s;
   transition-duration: 0.2s;
   position: absolute;
   top: calc(100% + 9px);
@@ -3439,13 +3943,16 @@ a.text-brand-3:hover {
 }
 
 .sticky-bar.stick {
+  -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
   box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
   left: 0;
+  -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   border-bottom: 1px solid #DDE4F0;
   background: #fff;
@@ -3715,6 +4222,7 @@ a.text-brand-3:hover {
   width: 320px;
   background-color: #fff;
   padding: 22px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius: 0 0 4px 4px;
   border: 1px solid #D5DFE4;
@@ -3735,6 +4243,7 @@ a.text-brand-3:hover {
   width: 220px;
   background-color: #fff;
   padding: 22px;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   border-radius: 0 0 4px 4px;
   border: 1px solid #D5DFE4;
@@ -3744,7 +4253,10 @@ a.text-brand-3:hover {
   visibility: visible;
 }
 .dropdown-account ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   margin: 0 0 20px;
 }
@@ -3774,6 +4286,34 @@ a.text-brand-3:hover {
   color: #0BA9ED !important;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .mobile-header-wrapper-style {
   position: fixed;
   top: 0;
@@ -3783,14 +4323,19 @@ a.text-brand-3:hover {
   right: 0;
   visibility: hidden;
   opacity: 0;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+  -o-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   background-color: #ffffff;
+  -webkit-box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.09);
   box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.09);
   z-index: 1003;
 }
 .mobile-header-wrapper-style.sidebar-visible {
   visibility: visible;
   opacity: 1;
+  -webkit-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
   transform: translate(0, 0);
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner {
@@ -3805,11 +4350,22 @@ a.text-brand-3:hover {
   padding-bottom: 15px;
 }
 .mobile-header-wrapper-style .mobile-header-wrapper-inner .mobile-header-top {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
   justify-content: space-between;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   padding: 0;
   background-color: #ffffff;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
   align-items: center;
   align-self: center;
   border-bottom: 0;
@@ -3952,6 +4508,7 @@ a.text-brand-3:hover {
   margin-top: 5px;
   display: none;
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
   padding: 10px 0 0 0;
   width: 100%;
@@ -3987,6 +4544,7 @@ a.text-brand-3:hover {
   width: 24px;
   height: 20px;
   cursor: pointer;
+  -webkit-transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
   top: 15px;
   right: 0px;
@@ -4072,6 +4630,7 @@ a.text-brand-3:hover {
   text-align: center;
   font-size: 14px;
   margin-right: 5px;
+  -webkit-transition-duration: 0.5s;
   transition-duration: 0.5s;
   height: 30px;
   width: 30px;
@@ -4362,6 +4921,34 @@ a.text-brand-3:hover {
   min-width: 130px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .sidebar-title {
   border-bottom: thin solid #425A8B;
   font-weight: 600;
@@ -4376,6 +4963,7 @@ a.text-brand-3:hover {
   border: 1px solid #ececec;
   border-radius: 10px;
   height: 64px;
+  -webkit-box-shadow: none;
   box-shadow: none;
   padding-left: 20px;
   font-size: 16px;
@@ -4384,6 +4972,7 @@ a.text-brand-3:hover {
 .search-form form button {
   position: absolute;
   top: 50%;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   right: 0;
   border: none;
@@ -4450,6 +5039,34 @@ a.text-brand-3:hover {
   margin-bottom: 15px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .footer .icon-socials {
   display: inline-block;
   margin-right: 15px;
@@ -6167,6 +6784,34 @@ a.text-brand-3:hover {
   margin-right: 200px !important;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .list-brands {
   display: flex;
   width: 100%;
@@ -6374,6 +7019,34 @@ a.text-brand-3:hover {
   height: 250px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .label-green {
   background-color: #5BC694;
   border-radius: 4px;
@@ -6537,6 +7210,34 @@ a.text-brand-3:hover {
   background: url(../imgs/page/homepage2/next.svg) no-repeat top right;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .text-underline {
   text-decoration: underline;
 }
@@ -6699,6 +7400,34 @@ a.text-brand-3:hover {
   padding: 50px 40px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-button-slider-normal {
   text-align: right;
 }
@@ -6863,6 +7592,34 @@ a.text-brand-3:hover {
   font-weight: bold;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .dropdown .sidebar-left .menu-texts {
   border: 0px;
 }
@@ -6981,6 +7738,34 @@ a.text-brand-3:hover {
   text-align: center;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .banner-left {
   position: relative;
   width: 100%;
@@ -7171,6 +7956,34 @@ a.text-brand-3:hover {
   margin: auto;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .header-brand-2 {
   border-top: 0px;
 }
@@ -7383,6 +8196,34 @@ a.text-brand-3:hover {
   z-index: 1;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .banner-8 .swiper-pagination-custom {
   bottom: 20px;
   padding-left: 50px;
@@ -7543,6 +8384,34 @@ a.text-brand-3:hover {
   padding-top: 60px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .notify-text {
   display: inline;
   padding: 0px 0px 0px 20px;
@@ -7704,6 +8573,34 @@ a.text-brand-3:hover {
   display: none;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .list-categories-style-1 {
   display: flex;
   width: 100%;
@@ -7872,6 +8769,34 @@ a.text-brand-3:hover {
   width: 100%;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 @media (min-width: 768px) {
   .display-list .card-grid-style-3 .card-grid-inner {
     display: flex;
@@ -7948,9 +8873,39 @@ a.text-brand-3:hover {
 .display-list .btn-tooltip:hover:before {
   opacity: 1;
   visibility: visible;
+  -webkit-transform: translateY(-8px);
+  -ms-transform: translateY(-8px);
   transform: translateY(-8px);
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .gallery-image {
   display: flex;
   width: 100%;
@@ -8425,6 +9380,7 @@ a:hover span {
   border: 1px solid #DDE4F0;
   border-radius: 4px;
   padding: 20px;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -8461,12 +9417,14 @@ a:hover span {
 
 .comments-area .comment-list .single-comment .reply {
   opacity: 0;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
   color: #0BA9ED;
 }
 
 .comments-area .comment-list .single-comment:hover .reply {
   opacity: 1;
+  -webkit-transition: 0.2s;
   transition: 0.2s;
 }
 
@@ -8559,6 +9517,34 @@ a:hover span {
   vertical-align: middle;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-wishlist {
   max-width: 95%;
   margin: auto;
@@ -8653,6 +9639,34 @@ a:hover span {
   width: 100%;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .form-group {
   margin-bottom: 15px;
 }
@@ -8678,6 +9692,34 @@ a:hover span {
   margin-bottom: 30px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-payment {
   display: flex;
   margin: 0px -10px;
@@ -8733,6 +9775,34 @@ a:hover span {
   width: 76%;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-compare-products {
   display: flex;
   color: #425A8B;
@@ -8779,6 +9849,34 @@ a:hover span {
   width: 40%;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .nav-center {
   text-align: center;
 }
@@ -8981,6 +10079,34 @@ a:hover span {
   width: 100%;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .box-banner-vendor {
   margin-left: -10px;
   margin-right: -10px;
@@ -9036,6 +10162,34 @@ a:hover span {
   margin-top: -60px !important;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .form-register .btn-buy {
   padding: 14px 22px;
 }
@@ -9300,6 +10454,34 @@ a:hover span {
   min-height: 44px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .list-services {
   list-style: none;
   display: flex;
@@ -9332,6 +10514,34 @@ a:hover span {
   border-top: 1px solid #D5DFE4;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 .breadcrumbs-div {
   padding: 16px 0px;
   margin-bottom: 30px;
@@ -9739,6 +10949,34 @@ a:hover span {
   margin-left: 1px;
 }
 
+/***
+ Theme Name: Ecom
+ Description: Multipurpose Marketplace HTML Template + RTL
+ Version: 3.0
+ License: GNU General Public License v2 or later
+ License URI: http://www.gnu.org/licenses/gpl-2.0.html
+==============================
+TABLE CONTENT
+ Import Google Fonts
+ Include Third Party CSS Library
+ GENERAL
+ HEADER
+ Offcanvas Sidebar
+ Search form
+ Main header
+ Mega menu
+ Header layouts
+ Page layouts
+ Pagination
+ Breadcrumb
+ CATEGORY PAGES
+ SINGLE POST
+ Author box
+ comment
+ Post share social
+ WP STYPE
+ Custom amine
+***/
 @media (max-width: 1550px) {
   .banner-hero.banner-2 .block-2 {
     right: -10px;
@@ -9748,10 +10986,18 @@ a:hover span {
     width: 25px;
     height: 25px;
   }
+  .header .main-header .header-right .header-shop .icon-list {
+    padding: 0px 18px 0px 18px;
+    width: 25px;
+    height: 25px;
+  }
   .header-shop a span {
     display: none;
   }
   .header .main-header .header-left .header-shop {
+    width: 16%;
+  }
+  .header .main-header .header-right .header-shop {
     width: 16%;
   }
 }
@@ -9831,6 +11077,11 @@ a:hover span {
     width: 33.333%;
   }
   .header .main-header .header-left .header-shop {
+    width: 35%;
+    padding-right: 35px;
+    min-width: 189px;
+  }
+  .header .main-header .header-right .header-shop {
     width: 35%;
     padding-right: 35px;
     min-width: 189px;
@@ -9948,6 +11199,9 @@ a:hover span {
     display: none;
   }
   .header .main-header .header-left .header-shop {
+    padding-top: 5px;
+  }
+  .header .main-header .header-right .header-shop {
     padding-top: 5px;
   }
   .btn.btn-open {
@@ -10410,6 +11664,9 @@ a:hover span {
   .header .main-header .header-left .header-shop {
     min-width: 189px;
   }
+  .header .main-header .header-right .header-shop {
+    min-width: 189px;
+  }
   .header .main-header .header-left .header-search {
     display: none;
   }
@@ -10420,6 +11677,9 @@ a:hover span {
     max-width: 100%;
   }
   .header .main-header .header-left .header-shop {
+    width: 55%;
+  }
+  .header .main-header .header-right .header-shop {
     width: 55%;
   }
   .list-products-5.list-products-3 .card-grid-style-3 {
@@ -10875,4 +12135,5 @@ a:hover span {
 .page-content p {
   margin-bottom: 15px;
 }
+
 /*# sourceMappingURL=style.css.map */
